@@ -27,3 +27,15 @@ if (dia === 0){
     console.log('Hoy no es lunes, martes o domingo');
 }
 
+//Sin usar If Else o Swich, unicamente objetos
+
+const DiasSemana = 
+                ['Domingo', 
+                'Lunes', 
+                'Martes', 
+                'Miercoles',
+                'Jueves', 
+                'Viernes', 
+                'Sabado'];
+
+console.log(DiasSemana[dia]);
