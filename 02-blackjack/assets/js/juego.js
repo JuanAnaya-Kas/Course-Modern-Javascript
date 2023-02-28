@@ -28,3 +28,15 @@ deck = _.shuffle(deck);
 
 // Mostramos el array mezclado en la consola
 console.log(deck);
+
+// Esta funcion me permite tomar una carte 
+
+const pedirCarta = () => {
+    if (deck.length === 0){
+        throw 'No hay cartas en el deck';
+    }
+    const carta = deck.pop();
+    return carta
+}
+
+pedirCarta();
