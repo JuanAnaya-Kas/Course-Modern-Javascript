@@ -40,3 +40,16 @@ const pedirCarta = () => {
 }
 
 pedirCarta();
+
+const valorCarta = (carta) => {
+    const valor = carta.substring(0,carta.length-1);
+    console.log(valor)
+    if(isNaN(valor)){
+        console.log('No es un numero')
+    }else{
+        console.log('Es un numero')
+        puntos = valor
+    }
+}
+
+valorCarta('2D');
