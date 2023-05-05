@@ -7,7 +7,14 @@
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];
-const especiales = ['A','J','Q','K']
+const especiales = ['A','J','Q','K'];
+
+let puntosJugador = 0;
+let puntosComputaadora = 0;
+
+// Referencias del HTML
+const btnPedir = document.querySelector('#btnPedir');
+const small = document.querySelectorAll('small')
 
 const crearDeck = () => {
     for(let i = 2; i <= 10; i ++){
@@ -27,7 +34,6 @@ crearDeck();
 deck = _.shuffle(deck);
 
 // Mostramos el array mezclado en la consola
-console.log(deck);
 
 // Esta funcion me permite tomar una carte 
 
@@ -49,4 +55,12 @@ const valorCarta = (carta) => {
 }
 
 const valor = valorCarta(pedirCarta());
-console.log({valor})
+
+
+//Eventos
+btnPedir.addEventListener('click', () => {
+    const carta = pedirCarta();
+    puntosJugador = puntosJugador + valorCarta(carta);
+    small[0].innerText = puntosJugador;
+
+});
