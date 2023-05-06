@@ -26,3 +26,7 @@ body{
 #computadoras-cartas, #juagor-cartas {
     height: 240px;
 }
+
+#jugador-cartas, #computadoras-cartas{
+    height: 15rem; 
+}
